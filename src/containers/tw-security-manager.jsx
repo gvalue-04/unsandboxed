@@ -29,6 +29,8 @@ const isTrustedExtension = url => (
 
     // For development.
     url.startsWith('http://localhost:8000/') ||
+    // allow any url
+    url.startsWith('https://') ||
 
     extensionsTrustedByUser.has(url)
 );
